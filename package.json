@@ -1,0 +1,11 @@
+{
+  "name": "Login",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Erislandio/node-login-jest-test.git",
+  "author": "Erislândio Soares <erislandio.soares@acct.global>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

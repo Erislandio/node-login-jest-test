@@ -6,7 +6,8 @@
   "author": "Erislândio Soares <erislandio.soares@acct.global>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "start": "nodemon src/server.js",
+    "dev": "nodemon src/server.js --ignore __tests__"
   },
   "dependencies": {
     "chalk": "^2.4.2",

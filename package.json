@@ -5,6 +5,9 @@
   "repository": "https://github.com/Erislandio/node-login-jest-test.git",
   "author": "Erislândio Soares <erislandio.soares@acct.global>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
   "dependencies": {
     "chalk": "^2.4.2",
     "express": "^4.17.1",
@@ -14,6 +17,7 @@
     "sequelize": "^5.9.4"
   },
   "devDependencies": {
+    "nodemon": "^1.19.1",
     "sequelize-cli": "^5.5.0"
   }
 }

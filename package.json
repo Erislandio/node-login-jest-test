@@ -1,11 +1,16 @@
 {
-  "name": "Login",
+  "name": "login-teste",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/Erislandio/node-login-jest-test.git",
   "author": "Erislândio Soares <erislandio.soares@acct.global>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^7.11.0",
+    "sequelize": "^5.9.4"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.5.0"
   }
 }

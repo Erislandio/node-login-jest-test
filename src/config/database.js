@@ -1,8 +1,8 @@
 module.exports = {
-  username: "root",
+  username: process.env.DB_USER,
   password: '',
-  database: "nodeauth",
-  host: "127.0.0.1",
+  database: process.env.DB_NAME,
+  host: process.env.DB_HOST,
   dialect: "mysql",
   logging: false,
   define: {

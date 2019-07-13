@@ -8,7 +8,9 @@
   "scripts": {
     "start": "nodemon src/server.js",
     "dev": "nodemon src/server.js --ignore __tests__",
-    "test": "NODE_ENV=teste jest"
+    "pretest": "sequelize db:migrate",
+    "test": "jest",
+    "posttest": "sequelize db:migrate:undo:all"
   },
   "dependencies": {
     "chalk": "^2.4.2",

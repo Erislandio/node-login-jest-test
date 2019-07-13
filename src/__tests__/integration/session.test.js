@@ -1,14 +1,22 @@
+const request = require("supertest");
 const { User } = require("../../app/models");
+const app = require("../../app.js");
 
 describe("Authentication", () => {
-  it("should receive JWT token when authenticate with credentials", async () => {
+  it("should authenticate with valid credential", async () => {
     const user = await User.create({
-      name: "José carlos",
-      email: "josecarlos123@gmail.com",
-      password_hash: "1234"
+      name: "Maria Eduarda",
+      email: "mariadudu@gmail.com",
+      password_hash: "12341234"
     });
 
-    console.log(user);
-    expect(user.email).toBe("josecarlos123@gmail.com");
+    const response = await request(app)
+      .post("/sessions")
+      .send({
+        email: user.email,
+        password: "12341234"
+      });
+
+    expect(response.status).toBe(200);
   });
 });

@@ -3,7 +3,13 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     password_hash: DataTypes.STRING
-  });
+  }, {
+    hooks: {
+      beforeSave: async user => {
+        user.password_hash = "123"
+      }
+    }
+  };
 
   return User;
 };
